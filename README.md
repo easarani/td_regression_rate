@@ -1,7 +1,9 @@
 ## A Look Into Touchdown Regression
-Analysis article, Code Samples, and Data from [airyads](https://airyards.com/). This exercises investigates NFL receiving data to determine touchdown regression rate to equip fantasy football players with a simple, yet powerful, tool in making executive roster decsisions.
+Analysis article, Code Samples, and Data from [airyards](https://airyards.com/). This exercises investigates NFL receiving data to determine touchdown regression rate to equip fantasy football players with a simple, yet powerful, tool in making executive roster decsisions.
 
 
+### Exploratory Data Analysis
+First portion of this investigation was to explore the [airyads] data and clean any null values. This step allows for accurate analysis and modeling. I combined years of data into a single dataframe and created a function to determine certain summary statistics. [airyards] already has readily usable data and very few NaN specific variables. After using `fillna()`, the concatanated dataframe was ready for analysis.
 
 
 ## Fall 2019 Data Analytics
