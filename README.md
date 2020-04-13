@@ -3,18 +3,13 @@ Analysis article, Code Samples, and Data from [airyards](https://airyards.com/).
 
 
 ### Exploratory Data Analysis
-First portion of this investigation was to explore the [airyads] data and clean any null values. This step allows for accurate analysis and modeling. I combined years of data into a single dataframe and created a function to determine certain summary statistics. [airyards] already has readily usable data and very few NaN specific variables. After using `fillna()`, the concatanated dataframe was ready for analysis.
+First portion of this investigation was to explore the [airyads](https://airyards.com/) data and clean any null values. This step allows for accurate analysis and modeling. I combined years of data into a single dataframe and created a function to determine certain summary statistics. [airyards](https://airyards.com/) already has readily usable data and very few NaN specific variables. After using `fillna()`, the concatenated dataframe was ready for analysis.
 
 
-## Fall 2019 Data Analytics
-Notes, Code Samples, Exercises, and Project Instructions for the [OKCoders Data Analytics Boot Camp](https://www.okcoders.com/blog/data-analytics-bootcamp-fall-2019-in-okc).
+### Receiving Yards to Touchdowns Correlation
+Our datasets from airyards contains tight end and wide receiver specific data. We want to independtly explore each to determine positional dependent correlation.
++ Wide Receviver: the tight end data was excised. I grouped by each wide receiver to summate receiving yards and touchdowns to plot a correlation. I used [Seaborn](https://seaborn.pydata.org/generated/seaborn.lmplot.html) library for out visualization. From [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html), I ran a linear regression model that determined a strong R^2 value (**0.927**) between wide receiver receiving yards and receiving touchdown. I then determined the average amount of wide receiver receiving yards leads to one touchdown - **159 receving yards/touchdwon**.
++ Tight End: the wide recevier data was excised from the concatenated dataset. Repeated the above process to determine positional specific correlation; this was visualized, modeled and scored (R^2 = **0.881**), and the average tight end receiving yards to touchdown was calculated to be **129 receiving yards/touchdown**.
 
 
-### Scope of the Course
-This 8-week introductory bootcamp will cover the basics of data analytics using SQL and Python. During the 8 weeks you’ll learn how to work with a relational SQL database, how to break down analytical questions into small sub-problems, and how to solve each with the Python programming language. The class will cover the basics of working with data, statistical modeling, and some application of machine learning. This will include the completion of 2 analytical projects that can be shown in a code portfolio. The bootcamp is intended for beginners, but experienced developers are welcome as well.
-
-
-### Technology Used in this Course
-+ [SQL](https://en.wikipedia.org/wiki/SQL): The Structured Query Language (SQL) is the primary method for interacting with [Relational Databases](https://en.wikipedia.org/wiki/Relational_database). A Relational Database is a place to house data that neatly fits into rows and columns (think Excel, but far more powerful and scalable). We will use SQL to interact with data, do simple data connection and formatting operations, and even interact with SQL from inside the analytics pipelines we will write in R.
-
-+ [SQLite](https://en.wikipedia.org/wiki/SQLite): The specific relational database engine and environment we are going to use will be SQLite (pronounced "Sequel Light"). SQLite is an entire database that saves to a single file. We will be able to interact with all major SQL commands using this light weight database, as well as connect to it directly with R to incorporate SQL and R programming pipelines together.
+### Determining Touchdown Regression Rate
