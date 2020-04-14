@@ -15,6 +15,7 @@ Our dataframes contain tight end and wide receiver specific data. We want to exp
 ### Determining Touchdown Regression Rate
 Now that we know that receiving yards and tochdowns correlate strongly, we can make a function to determine a player's touchdown regression rate. We need to be sure to use the right receiving yards/touchdown ratio depeding on the player's position (WR or TE). The average wide receiver scores a touchdown on approximately every 159 receiving yards. The average tight end scores a touchdown on approximately every 129 receiving yards. Let us a build a function:
 + Function regression_air_yards will take in three variables (an airyards dataframe, a selected position, and a corresponding positional touchdown ratio). This function creates a column and calculates the touchdown regression rate for each player for a given year.
+
 Negative and positive touchdown regression candidates can we visualized using [Seaborn's diverging pallette](https://seaborn.pydata.org/generated/seaborn.diverging_palette.html). Understanding regression and that receiving yards correlate with touchdowns will equip fantasy football players with beneficial knowledge when making lineup moves and trades.
 
 ### Conclusion
