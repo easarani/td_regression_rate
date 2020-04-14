@@ -3,11 +3,11 @@ Analysis article, Code Samples, and [airyards](https://airyards.com/) Data. This
 
 
 ### Exploratory Data Analysis
-Initially, I set to explore [airyads](https://airyards.com/) data and clean any null values. This step allows for accurate analysis and modeling. I combined years of data into a single dataframe and created a function to determine certain summary statistics. [airyards](https://airyards.com/) already has readily usable data and very few ***NaN*** specific variables. After using `fillna()`, the concatenated dataframe was ready for analysis.
+Initially, I explored [airyads](https://airyards.com/) data and cleaned any null values. This step allows for accurate analysis and modeling. I combined years of data into a single dataframe and created a function to determine certain summary statistics. [airyards](https://airyards.com/) already has readily usable data and very few ***NaN*** specific variables. After using `fillna()`, the concatenated dataframe was ready for analysis.
 
 
 ### Receiving Yards-to-Touchdowns Correlation
-Our dataframes contain tight end and wide receiver specific data. We want to independtly explore each to determine positional independent correlation.
+Our dataframes contain tight end and wide receiver specific data. We want to explore each to determine positional independent correlation.
 + Wide Receviver: the tight end data was excised. I grouped by each wide receiver to summate receiving yards and touchdowns to plot a correlation. I used [Seaborn's lmplot](https://seaborn.pydata.org/generated/seaborn.lmplot.html) for our visualization. From [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html), I ran a linear regression model that determined a strong R^2 value (**0.927**) between wide receiver receiving yards and receiving touchdowns. I then determined the average amount of wide receiver receiving yards that leads to one touchdown - **159 receving yards/touchdwon**.
 + Tight End: the wide recevier data was excised from the concatenated dataframe. Repeat the above process to determine positional specific correlation; this was visualized, modeled and scored (R^2 = **0.881**), and the average tight end receiving yards-to-touchdown was calculated to be **129 receiving yards/touchdown**.
 
